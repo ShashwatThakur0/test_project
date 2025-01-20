@@ -15,7 +15,7 @@ function calculateAge(birthYear, currentYear) {
   const age = currentYear - birthYear;
 
   //Boundary condition
-  if (age <= 0 || age > 900000000) {
+  if (age <= 0 || age > 150) {
     throw new Error('Invalid year');
   } else {
     return age;
