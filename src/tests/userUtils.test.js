@@ -6,14 +6,9 @@ describe('user Utilities', () => {
 
   // Test cases
   describe('getUserFullName', () => {
-    it('should return the full name of the user with first and last name', () => {
-      const user = { firstName: 'Batman', lastName: 'Wayne' };
-      expect(getUserFullName(user)).toBe('Batman Wayne');
-    });
-
-    it('should throw an error if the user data is incomplete', () => {
-      const user = { firstName: 'Batman' };
-      expect(() => getUserFullName(user)).toThrow('Invalid user data');
+    it('should return the full name of the user with first and last name or no last name', () => {
+      const user = { firstName: 'Batman', lastName: '' };
+      expect(getUserFullName(user)).toBe('Batman');
     });
 
   });

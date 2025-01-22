@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1737405044263" clover="3.2.0">
-  <project timestamp="1737405044263" name="All files">
-    <metrics statements="17" coveredstatements="13" conditionals="21" coveredconditionals="13" methods="5" coveredmethods="4" elements="43" coveredelements="30" complexity="0" loc="17" ncloc="17" packages="1" files="3" classes="3"/>
+<coverage generated="1737425456566" clover="3.2.0">
+  <project timestamp="1737425456567" name="All files">
+    <metrics statements="17" coveredstatements="12" conditionals="23" coveredconditionals="12" methods="5" coveredmethods="4" elements="45" coveredelements="28" complexity="0" loc="17" ncloc="17" packages="1" files="3" classes="3"/>
     <file name="add.js" path="C:\Users\shashwat\OneDrive\Desktop\test_project\src\function\add.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="3" type="stmt"/>
@@ -13,10 +13,10 @@
       <line num="5" count="1" type="stmt"/>
     </file>
     <file name="userUtils.js" path="C:\Users\shashwat\OneDrive\Desktop\test_project\src\function\userUtils.js">
-      <metrics statements="13" coveredstatements="9" conditionals="21" coveredconditionals="13" methods="3" coveredmethods="2"/>
-      <line num="3" count="2" type="cond" truecount="5" falsecount="0"/>
+      <metrics statements="13" coveredstatements="8" conditionals="23" coveredconditionals="12" methods="3" coveredmethods="2"/>
+      <line num="3" count="1" type="cond" truecount="4" falsecount="1"/>
       <line num="4" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
+      <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="11" count="2" type="cond" truecount="4" falsecount="3"/>
       <line num="12" count="0" type="stmt"/>
       <line num="15" count="2" type="stmt"/>

@@ -3,7 +3,7 @@ function getUserFullName(user) {
   if (!user || !user.firstName || !user.lastName) {
     throw new Error('Invalid user data');
   }
-  return `${user.firstName} ${user.lastName}`;
+  return `${user.firstName} ${user.lastName || ''}`.trim();
 }
 
 function calculateAge(birthYear, currentYear) {
@@ -27,7 +27,7 @@ function getUserInitials(user) {
   if (!user || !user.firstName || !user.lastName) {
     throw new Error('Invalid user data');
   }
-  return `${user.firstName.charAt(0)}${user.lastName.charAt(0)}`;
+  return `${user.firstName.charAt(0).toUpperCase()}${user.lastName.charAt(0).toUpperCase()}`;
 }
 
 module.exports = {
