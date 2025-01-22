@@ -1,6 +1,6 @@
 //Bug found in condition where user has only first name 
 function getUserFullName(user) {
-  if (!user || !user.firstName || !user.lastName) {
+  if (!user || !user.firstName) {
     throw new Error('Invalid user data');
   }
   return `${user.firstName} ${user.lastName || ''}`.trim();
@@ -8,15 +8,20 @@ function getUserFullName(user) {
 
 function calculateAge(birthYear, currentYear) {
 
-  if (isNaN(birthYear) || isNaN(currentYear || birthYear % 1 != 0 || currentYear % 1 != 0)) {
+  if (
+    isNaN(birthYear) ||
+    isNaN(currentYear) ||
+    birthYear % 1 !== 0 ||
+    currentYear % 1 !== 0
+  ) {
     throw new Error('Invalid year');
   }
 
   const age = currentYear - birthYear;
 
   //Boundary condition
-  if (age <= 0 || age > 150) {
-    throw new Error('Invalid year');
+  if (age <= 0 || age > 124) {
+    throw new Error('Invalid birth year');
   } else {
     return age;
   }
