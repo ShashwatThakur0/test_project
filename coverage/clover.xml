@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1737511936055" clover="3.2.0">
-  <project timestamp="1737511936055" name="All files">
-    <metrics statements="25" coveredstatements="18" conditionals="23" coveredconditionals="15" methods="6" coveredmethods="5" elements="54" coveredelements="38" complexity="0" loc="25" ncloc="25" packages="1" files="4" classes="4"/>
+<coverage generated="1737684911106" clover="3.2.0">
+  <project timestamp="1737684911106" name="All files">
+    <metrics statements="25" coveredstatements="20" conditionals="23" coveredconditionals="16" methods="6" coveredmethods="5" elements="54" coveredelements="41" complexity="0" loc="25" ncloc="25" packages="1" files="4" classes="4"/>
     <file name="add.js" path="C:\Users\shashwat\OneDrive\Desktop\test_project\src\function\add.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="3" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
     </file>
     <file name="fetchData.js" path="C:\Users\shashwat\OneDrive\Desktop\test_project\src\function\fetchData.js">
-      <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="5" count="0" type="stmt"/>
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
     </file>
     <file name="getUser.js" path="C:\Users\shashwat\OneDrive\Desktop\test_project\src\function\getUser.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
