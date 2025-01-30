@@ -21,3 +21,6 @@ const createUser = async (name, email, password, age) => {
     throw new Error('Error creating user')
   }
 }
+
+
+module.exports = { createUser, User }
