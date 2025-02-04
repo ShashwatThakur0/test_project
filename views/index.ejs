@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Login page</title>
+		<title>Login Page</title>
 	</head>
 	<body>
-		<h1>Login page</h1>
+		<h1>Login Page</h1>
 		<form id="login-form">
 			<input type="email" id="email" placeholder="email" />
 			<br />
 			<br />
 			<input type="password" id="password" placeholder="password" />
-			<br />
-			<br />
-			<button type="submit">Submit</button>
+
+			<button id="login-button">Submit</button>
 		</form>
 
 		<p id="error-message" style="color: red; display: none">
 			Invalid email or password
 		</p>
-
-		<script>
-			document
-				.getElementById("login-form")
-				.addEventListener("submit", function (event) {
-					event.preventDefault();
-
-					const email = document.getElementById("email").value;
-					const password = document.getElementById("password").value;
-
-					if (email == "batmanbegins@example.com" && password == "vengeance") {
-						alert("Login successful");
-					} else {
-						document.getElementById("error-message").style.display = "block";
-					}
-				});
-		</script>
 	</body>
+	<script>
+		document
+			.getElementById("login-form")
+			.addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				const email = document.getElementById("email").value;
+				const password = document.getElementById("password").value;
+
+				if (email == "batmanbegins@example.com" && password == "vengeance") {
+					alert("Login successful");
+				} else {
+					document.getElementById("error-message").style.display = "block";
+				}
+			});
+	</script>
 </html>
