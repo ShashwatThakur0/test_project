@@ -1,21 +1,24 @@
-// test suite 
-describe('Login page', () => {
+//test suite
+describe('Login Page', () => {
+  //pre-conditions. alternatively, we can use afterEach for post-conditions
   beforeEach(() => {
 
     cy.visit('http://localhost:3000/home');
   });
 
-  // Arrange 
+
+  //Positive testing
   it('should login with valid credentials', () => {
-    cy.get('#email').type('batmanbegins@example.com');
-    cy.get('#password').type('vengeance');
+    //Arrange
+    cy.get('#email').type('test@example.com');
+    cy.get('#password').type('password123');
 
-    // act 
-    cy.get('#login-form').click();
+    //Act
+    cy.get('#login-button').click();
 
-    // assert
+    //Assert
     cy.on('window:alert', (txt) => {
-      expect(txt).to.contain('Login Sucessful!');
+      expect(txt).to.contains('Login Successful!')
     });
   });
 
@@ -35,5 +38,17 @@ describe('Login page', () => {
     );
   });
 
+  it('should only submit once', () => {
+    //Arrange
+    cy.get('#email').type('test@example.com');
+    cy.get('#password').type('password123');
 
+    //Act
+    for (var i = 0; i < 3; i++) {
+      cy.get('#login-button').click();
+    }
+
+    //Assertion  
+    cy.get('#submitCount').should('have.to', '1')
+  });
 });
