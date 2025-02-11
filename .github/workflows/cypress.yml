@@ -1,5 +1,5 @@
 name: Run Cypress Tests
-on: push 
+on: [push, pull_request]
 jobs: 
   test:
     runs-on: ubuntu-latest 
@@ -17,7 +17,7 @@ jobs:
         with: 
           build: npm run build 
           start: npm start 
-          wait-On: 'http://localhost:3000'
+          wait-on: 'http://localhost:3000'
           runTests: true
           
      
