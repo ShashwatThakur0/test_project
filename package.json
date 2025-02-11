@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "build": "echo 'No build step required'",
-    "start": "node index.js"
+    "start": "node app.js"
     
   },
   "keywords": [],
