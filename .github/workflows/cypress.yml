@@ -17,7 +17,7 @@ jobs:
         with: 
           build: npm run build 
           start: npm start 
-          withOn: 'http://localhost:3000'
+          wait-On: 'http://localhost:3000'
           runTests: true
           
      
