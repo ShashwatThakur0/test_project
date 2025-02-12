@@ -51,4 +51,20 @@ describe('Login Page', () => {
     //Assertion  
     cy.get('#submitCount').should('have.to', '1')
   });
+
+  //Brute force testing 
+  it('should for multiple failed login attempts', () => {
+
+    for (let i = 0; i < 5; i++) {
+      cy.get('#email').clear().type('wrongexample@gmail.com')
+      cy.get('#password').clear().type('wrongpassword')
+      cy.get('#login-button').click()
+    }
+    //Assert
+    cy.on('window:alert', (txt) => {
+      expect(txt).to.contains('Inavlid credentials')
+    });
+  });
+
+
 });
