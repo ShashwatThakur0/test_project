@@ -17,8 +17,10 @@ jobs:
         with: 
           build: npm run build 
           start: npm start 
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 180
+          wait-on: 'http://localhost:3000/home'
+          wait-on-timeout: 300
           runTests: true
           
-     
+
+
+
