@@ -25,8 +25,8 @@ describe('Login Page', () => {
   //Negative testing
   it('should display error message if wrong credentials', () => {
     //Arrange
-    cy.get('#email').type('test@examples.com');
-    cy.get('#password').type('password123');
+    cy.get('#email').type('wrongexample@gmail.com');
+    cy.get('#password').type('wrongpassword');
 
     //Act
     cy.get('#login-button').click();
