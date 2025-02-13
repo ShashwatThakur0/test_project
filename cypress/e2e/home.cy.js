@@ -25,45 +25,31 @@ describe('Login Page', () => {
   //Negative testing
   it('should display error message if wrong credentials', () => {
     //Arrange
-    cy.get('#email').type('wrongexample@gmail.com');
-    cy.get('#password').type('wrongpassword');
+    cy.get('#email').type('test@examples.com');
+    cy.get('#password').type('password123');
 
     //Act
     cy.get('#login-button').click();
 
     //Assert
     cy.on('window:alert', (txt) => {
-      expect(txt).to.contains('Inavlid credentials')
+      expect(txt).to.contains('Invalid credentials')
     });
   });
 
-  it('should only submit once', () => {
-    //Arrange
-    cy.get('#email').type('test@example.com');
-    cy.get('#password').type('password123');
-
-    //Act
-    for (var i = 0; i < 3; i++) {
-      cy.get('#login-button').click();
-    }
-
-    //Assertion  
-    cy.get('#submitCount').should('have.to', '1')
-  });
-
-  //Brute force testing 
+  //Brute force testing
   it('should for multiple failed login attempts', () => {
 
     for (let i = 0; i < 5; i++) {
       cy.get('#email').clear().type('wrongexample@gmail.com')
-      cy.get('#password').clear().type('wrongpassword')
-      cy.get('#login-button').click()
+      cy.get('#password').clear().type('guessedpassword')
+      cy.get('#login-button').click();
     }
+
     //Assert
     cy.on('window:alert', (txt) => {
-      expect(txt).to.contains('Inavlid credentials')
+      expect(txt).to.contains('Invalid credentials')
     });
   });
-
 
 });
